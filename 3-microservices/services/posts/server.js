@@ -6,11 +6,14 @@ try {
 
   require("appdynamics").profile({
     controllerHostName: 'controller.saas.appdynamics.com',
-    controllerPort: 8090,
+    controllerPort: 443,
+    controllerSslEnabled: true,
     accountName: 'account',
     accountAccessKey: 'access-key',
     applicationName: 'application-name',
     tierName: 'tier-name',
+    reuseNode: true,
+    reuseNodePrefix: 'node-prefix',
     nodeName: 'node-name' // The controller will automatically append the node name with a unique number
    });   
 } catch (e) {
