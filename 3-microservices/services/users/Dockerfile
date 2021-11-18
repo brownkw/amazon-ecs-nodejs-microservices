@@ -1,5 +1,6 @@
-FROM mhart/alpine-node:7.10.1
+FROM node:16-slim
 
+RUN mkdir -p /srv
 WORKDIR /srv
 ADD . .
 RUN npm install
